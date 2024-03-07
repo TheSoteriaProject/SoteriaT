@@ -17,25 +17,19 @@ jobs:
       uses: actions/setup-go@v2
       with:
         go-version: 1.21.6
-# May move back below Dependencies
+
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
 
-    - name: Checkout dependencies
+    - name: Checkout Dependencies
       run: |
         git clone https://github.com/TheSoteriaProject/SoteriaA.git
 
-    - name: Folder Check
+    - name: Run Soteria Action
       run: |
-        ls
         cd SoteriaA
-        ls
         go build
         go run main.go
-
-    - name: Check What is Available
-      run: ls
-
     
     - name: foo
       uses: TheSoteriaProject/SoteriaA@v1
