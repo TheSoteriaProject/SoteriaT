@@ -29,7 +29,4 @@ jobs:
       run: |
         cd SoteriaA
         go build
-        go run main.go
-    
-    - name: foo
-      uses: TheSoteriaProject/SoteriaA@v1
+        ./Soteria ../Files
