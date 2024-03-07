@@ -17,6 +17,9 @@ jobs:
       uses: actions/setup-go@v2
       with:
         go-version: 1.21.6
+# May move back below Dependencies
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
 
     - name: Checkout dependencies
       run: |
@@ -30,8 +33,9 @@ jobs:
         go build
         go run main.go
 
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v2
-
     - name: Check What is Available
       run: ls
+
+    
+    - name: foo
+      uses: TheSoteriaProject/SoteriaA@v1
