@@ -22,7 +22,7 @@ jobs:
       run: |
         git clone https://github.com/TheSoteriaProject/SoteriaA.git
 
-    - name: Folder Change
+    - name: Folder Check
       run: |
         ls
         cd SoteriaA
@@ -32,3 +32,6 @@ jobs:
 
     - name: Check out code into the Go module directory
       uses: actions/checkout@v2
+
+    - name: Check What is Available
+      run: ls
