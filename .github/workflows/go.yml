@@ -24,6 +24,7 @@ jobs:
 
     - name: Folder Change
       run: |
+        ls
         cd SoteriaA
         ls
         go build
