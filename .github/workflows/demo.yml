@@ -23,7 +23,7 @@ jobs:
 
     - name: Checkout Dependencies
       run: |
-        git clone https://github.com/TheSoteriaProject/Soteria.git@v1.0.1
+        git clone https://github.com/TheSoteriaProject/Soteria.git@latest
 
     - name: Run Soteria - Enabled Warn | Disbaled Docker Analyzer | Makefile Analyzers
       if: always()
