@@ -37,14 +37,14 @@ jobs:
       run: |
         cd Soteria/Soteria
         go build
-        ./Soteria --enablePrintLogs=false --enableMakefile=false --enableDockerfile=false ../Files
+        ./Soteria --enableLogPrint=false --enableMakefile=false --enableDockerfile=false ../Files
 
     - name: Run Soteria - Bad File Path
       if: always()
       run: |
         cd Soteria/Soteria
         go build
-        ./Soteria --enablePrintLogs=false --enableMakefile=false --enableDockerfile=false ../BaconRepo
+        ./Soteria --enableLogPrint=false --enableMakefile=false --enableDockerfile=false ../BaconRepo
 
     - name: Run Soteria - Help
       if: always()
