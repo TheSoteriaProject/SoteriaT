@@ -23,10 +23,10 @@ jobs:
 
     - name: Checkout Dependencies
       run: |
-        git clone https://github.com/TheSoteriaProject/SoteriaA.git
+        git clone https://github.com/TheSoteriaProject/Soteria.git
 
     - name: Run Soteria Action
       run: |
-        cd SoteriaA
+        cd Soteria
         go build
         ./Soteria ../Files
