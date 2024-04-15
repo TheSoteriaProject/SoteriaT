@@ -1,4 +1,4 @@
-name: Go
+name: Demo
 
 on:
   push:
@@ -26,30 +26,35 @@ jobs:
         git clone https://github.com/TheSoteriaProject/Soteria.git
 
     - name: Run Soteria - Enabled Warn | Disbaled Docker Analyzer | Makefile Analyzers
+      if: always()
       run: |
         cd Soteria/Soteria
         go build
         ./Soteria --warn=true --enableMakefile=false --enableDockerfile=false ../Files
 
     - name: Run Soteria - Disbaled Docker Analyzer | Makefile Analyzers | enablePrintsLogs
+      if: always()
       run: |
         cd Soteria/Soteria
         go build
         ./Soteria --enablePrintLogs=false --enableMakefile=false --enableDockerfile=false ../Files
 
     - name: Run Soteria - Bad File Path
+      if: always()
       run: |
         cd Soteria/Soteria
         go build
         ./Soteria --enablePrintLogs=false --enableMakefile=false --enableDockerfile=false ../BaconRepo
 
     - name: Run Soteria - Help
+      if: always()
       run: |
         cd Soteria/Soteria
         go build
         ./Soteria --help
 
-    - name: Run Soteria Action
+    - name: Run Soteria
+      if: always()
       run: |
         cd Soteria/Soteria
         go build
