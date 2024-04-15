@@ -30,7 +30,7 @@ jobs:
       run: |
         cd Soteria/Soteria
         go build
-        ./Soteria --warn=true --enableMakefile=false --enableDockerfile=false ../Files
+        ./Soteria --warn=true --enableMakefile=false --enableDockerfile=false ../../Files
 
     - name: Run Soteria - Disbaled Docker Analyzer | Makefile Analyzers | enablePrintsLogs
       if: always()
