@@ -25,6 +25,30 @@ jobs:
       run: |
         git clone https://github.com/TheSoteriaProject/Soteria.git
 
+    - name: Run Soteria - Disbaled Docker Analyzer | Makefile Analyzers
+      run: |
+        cd Soteria/Soteria
+        go build
+        ./Soteria --enableMakefile=false --enableDockerfile=false ../Files
+
+    - name: Run Soteria - Disbaled Docker Analyzer | Makefile Analyzers | enablePrintsLogs
+      run: |
+        cd Soteria/Soteria
+        go build
+        ./Soteria --enablePrintLogs=false --enableMakefile=false --enableDockerfile=false ../Files
+
+    - name: Run Soteria - Bad File Path
+      run: |
+        cd Soteria/Soteria
+        go build
+        ./Soteria --enablePrintLogs=false --enableMakefile=false --enableDockerfile=false ../BaconRepo
+
+    - name: Run Soteria - Help
+      run: |
+        cd Soteria/Soteria
+        go build
+        ./Soteria --help
+
     - name: Run Soteria Action
       run: |
         cd Soteria/Soteria
