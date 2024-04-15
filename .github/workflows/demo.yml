@@ -45,7 +45,7 @@ jobs:
         cd Soteria/Soteria
         go build
         ./Soteria --enableLogPrint=false ../Files
-      continue-on-error: true
+      # continue-on-error: true
 
     - name: Run Soteria - Bad File Path
       if: always()
