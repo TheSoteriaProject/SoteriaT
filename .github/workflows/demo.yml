@@ -23,7 +23,7 @@ jobs:
 
     - name: Checkout Dependencies
       run: |
-        git clone https://github.com/TheSoteriaProject/Soteria.git
+        git clone https://github.com/TheSoteriaProject/Soteria.git@v1.0.1
 
     - name: Run Soteria - Enabled Warn | Disbaled Docker Analyzer | Makefile Analyzers
       if: always()
@@ -32,7 +32,7 @@ jobs:
         go build
         ./Soteria --warn=true --enableMakefile=false --enableDockerfile=false ../../Files
 
-    - name: Run Soteria - Disbaled Docker Analyzer | Makefile Analyzers | enablePrintsLogs
+    - name: Run Soteria - Disbaled Docker Analyzer | Disabled Makefile Analyzers | Disabled enablePrintsLogs
       if: always()
       run: |
         cd Soteria/Soteria
