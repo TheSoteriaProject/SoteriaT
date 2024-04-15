@@ -27,6 +27,6 @@ jobs:
 
     - name: Run Soteria Action
       run: |
-        cd Soteria
+        cd Soteria/Soteria
         go build
         ./Soteria ../Files
