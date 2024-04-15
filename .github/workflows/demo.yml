@@ -39,6 +39,14 @@ jobs:
         go build
         ./Soteria --enableLogPrint=false --enableMakefile=false --enableDockerfile=false ../Files
 
+    - name: Run Soteria - Disabled enablePrintsLogs
+      if: always()
+      run: |
+        cd Soteria/Soteria
+        go build
+        ./Soteria --enableLogPrint=false --enableMakefile=false --enableDockerfile=false ../Files
+      continue-on-error: true
+
     - name: Run Soteria - Bad File Path
       if: always()
       run: |
